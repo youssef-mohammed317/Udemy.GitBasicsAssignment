@@ -57,3 +57,10 @@ git merge feature
 # history
 git log --oneline --graph --decorate
 git reflog
+
+938f0c4 (HEAD -> main, origin/main) HEAD@{0}: merge feature: Fast-forward
+f16fb44 HEAD@{1}: checkout: moving from feature to main
+938f0c4 (HEAD -> main, origin/main) HEAD@{2}: commit: add Please add me to the master/main branch to the third file
+bc70027 HEAD@{3}: commit: new commit for create feature branch and add third file
+f16fb44 HEAD@{4}: checkout: moving from main to feature
+f16fb44 HEAD@{5}: commit (initial): first commit
