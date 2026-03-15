@@ -1,55 +1,59 @@
+# Udemy.GitBasicsAssignment — Git Basics Assignment Practice Repo
+
+This repository contains the **assignment work** I completed while following the Udemy course:
+**“Git & GitHub – The Practical Guide”**.
+
+It is intentionally simple because the goal of this repository is to practice the **basic Git workflow**:
+creating a repository, making commits, working with branches, and merging feature work back into `main`.
 
 ---
 
-## `Udemy.GitBasicsAssignment/README.md`
+## What I practiced here
 
-```md
-# Udemy.GitBasicsAssignment
+- Creating an initial repository and first commit
+- Adding multiple files and tracking changes
+- Creating and switching to a `feature` branch
+- Making changes in an isolated branch
+- Merging the feature branch back into `main`
+- Understanding a **fast-forward merge**
+- Practicing a clean beginner-friendly Git workflow
 
-This repository contains my solution for the **Git Basics Assignment** from the course **Git & GitHub – The Practical Guide**.
+---
 
-## Course Link
+## Repository structure
 
-https://www.udemy.com/course/git-github-practical-guide/
+| Path | Purpose |
+|------|---------|
+| `instructions.txt` | Assignment instructions from the course |
+| `file-1.txt` | First tracked file |
+| `file-2.txt` | Second tracked file |
+| `file-3.txt` | File added and updated in feature branch workflow |
 
-## Assignment Focus
+---
 
-This repo was used to practice a complete beginner Git workflow:
+## Key Git commands used (core set)
 
-- creating a repository
-- committing files
-- creating a feature branch
-- making changes on the feature branch
-- merging back into `main`
-
-## Topics Covered
-
-- Initial commit
-- Working with multiple files
-- Creating a feature branch
-- Switching branches
-- Making changes on a branch
-- Fast-forward merge
-- Cleaning up branch history
-
-## Repository Files
-
-- `instructions.txt`
-- `file-1.txt`
-- `file-2.txt`
-- `file-3.txt`
-
-## Git Commands Practiced
+> Exact flags/options can vary, but these are the commands I used to perform the actions reflected in the reflog.
 
 ```bash
+# init + first commit
 git init
 git status
 git add .
-git commit -m "message"
+git commit -m "first commit"
+
+# branch workflow
 git switch -c feature
 git switch main
-git checkout -b feature
+
+# feature work
+git add .
+git commit -m "create feature branch and add third file"
+git commit -m "add Please add me to the master/main branch to the third file"
+
+# merging
 git merge feature
-git branch -d feature
-git log --oneline
+
+# history
+git log --oneline --graph --decorate
 git reflog
